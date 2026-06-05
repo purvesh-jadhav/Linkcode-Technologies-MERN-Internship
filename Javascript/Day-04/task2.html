@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <script>
+        var num1=Number(prompt("ENter 1st number"))
+        var num2=Number(prompt("Enter 2nd number"))
+        var choice = Number(prompt("-------Operations-------\n1.Addition \n2.Substarction \n3.Multiplication \n4.Division")) 
+
+        switch(choice){
+            case 1:document.write("<h1> Addition is :"+(num1+num2)+"</h1>");
+                   break;
+            case 2:document.write("<h1> Substarction is :"+(num1-num2)+"</h1>");
+                   break;
+            case 3:document.write("<h1> Multiplication is :"+(num1*num2)+"</h1>");
+                   break;
+            case 4:document.write("<h1> Addition is :"+(num1/num2)+"</h1>");
+                   break;
+            default:document.write("<h1>Please enter valid choice</h1>")
+
+        }
+    </script>
+</body>
+</html>

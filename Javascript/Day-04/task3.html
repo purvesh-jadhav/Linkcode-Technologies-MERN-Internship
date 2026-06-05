@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var balance  = 10000;
+       var choice=Number( prompt("-------Welcome to ATM------ \n Enter your choice: \n 1.Check balance \n 2.Withdraw \n 3.Deposit \n 4.Exit"))
+
+       switch(choice)
+       {
+        case 1:
+                document.write("<h2> Your balance is:"+balance+"</h2>")
+                break;
+        case 2:
+                var withdraw_amt=Number(prompt("Enter amount to withdraw:"))
+                balance=balance-withdraw_amt;
+                document.write("<h2>"+withdraw_amt+"rs withdrawn succesfully")
+                document.write("<h2> Available balance is:"+balance+"</h2>")
+                break;
+        case 3:
+                var deposit_amt=Number(prompt("Enter amount to deposit:"))
+                balance=balance+deposit_amt;
+                document.write("<h2>"+deposit_amt+"rs deposited succesfully")
+                document.write("<h2> Available balance is:"+balance+"</h2>")
+                break;
+        case 4:
+                document.write("<h2> thank you for choosing us </h2>");
+                break;
+
+        default:document.write("<h2> Invalid choice </h2>");
+
+
+       }
+    </script>
+</body>
+</html>

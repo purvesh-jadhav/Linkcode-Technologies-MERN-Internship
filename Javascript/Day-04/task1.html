@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var amount=Number(prompt("Enter your amount"))
+        var total_bill=0
+        var discount=0;
+        if(amount>5000){
+            discount=(20/100)*amount;
+            total_bill=amount-discount;
+            alert("Discount:"+discount+"\nTotal bill:"+total_bill)
+        }
+        else if(amount>3000){
+            discount=(10/100)*amount;
+            total_bill=amount-discount;
+            alert("Discount:"+discount+"\nTotal bill:"+total_bill)
+        }
+        else if(amount>1000){
+            discount=(5/100)*amount;
+            total_bill=amount-discount;
+           alert("Discount:"+discount+"\nTotal bill:"+total_bill)
+        }
+        else{
+            alert("No Discoount ,  sorry!!")
+        }
+    </script>
+</body>
+</html>
