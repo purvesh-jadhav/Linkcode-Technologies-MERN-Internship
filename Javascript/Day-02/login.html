@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login</title>
+</head>
+
+<body>
+
+<script>
+
+var correctUsername = "admin";
+var correctPassword = "admin@123";
+
+var username = prompt("Enter username");
+var password = prompt("Enter your password");
+
+if (username == correctUsername) {
+
+    if (password == correctPassword) {
+        alert("Login successful");
+    }
+    else {
+        alert("Wrong password");
+    }
+
+}
+else {
+    alert("Username not found");
+}
+
+</script>
+
+</body>
+</html>
