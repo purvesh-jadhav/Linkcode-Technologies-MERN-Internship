@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Check</title>
+</head>
+
+<body>
+
+<input type="number" id="empid" placeholder="Enter Employee ID">
+<br><br>
+
+<input type="text" id="empname" placeholder="Enter Employee Name">
+<br><br>
+
+<label>Enter time:</label>
+<input type="time" id="timee">
+
+<br><br>
+
+<button onclick="getData()">Submit</button>
+
+
+<h2 id="msg"></h2>
+<h3 id="details"></h3>
+
+
+<script>
+
+function getData(){
+
+    var employeeID = document.getElementById("empid")
+    var employeeName = document.getElementById("empname")
+    var checkTime = document.getElementById("timee")
+
+    var time = checkTime.value
+
+
+    var greeting;
+
+
+    if(time >= "05:00" && time < "12:00")
+    {
+        greeting = "Good Morning, "+employeeName.value;
+    }
+    else if(time >= "12:00" && time < "17:00")
+    {
+        greeting = "Good Afternoon,"+employeeName.value
+    }
+    else if(time >= "17:00" && time < "21:00")
+    {
+        greeting = "Good Evening,"+employeeName.value
+    }
+    else
+    {
+        greeting = "Good Night, "+employeeName.value;
+    }
+
+
+    document.getElementById("msg").innerHTML = greeting;
+
+
+    document.getElementById("details").innerHTML =
+    "Employee ID: " + employeeID.value +
+    "<br>Employee Name: " + employeeName.value +
+    "<br>Check In Time: " + checkTime.value
+
+}
+
+</script>
+
+
+</body>
+</html>

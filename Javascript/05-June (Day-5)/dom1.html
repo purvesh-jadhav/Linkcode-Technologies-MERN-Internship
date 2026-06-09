@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <input type="text" name="" id="user" placeholder="Enter username">
+    <br><br>
+    <input type="password" name="" id="pass" placeholder="Enter passowrd">
+    <br><br>
+    <button onclick="getData()" >Submit</button>
+    <br><br>
+    <h1 id="msg"></h1>
+    <script>
+        var userName="purvesh"
+        var passWord="purvesh@123"
+        function getData(){
+            var username=document.getElementById("user")
+            var password=document.getElementById("pass")
+            var message=document.getElementById("msg")
+
+            if(username.value==userName){
+                if(password.value==passWord){
+                message.innerHTML="Hello , "+userName
+                }
+                else{
+                message.innerHTML="Passsword incorrect"
+                }
+            }
+            else{
+                message.innerHTML="No user found !!"
+            }
+
+        }
+    </script>
+</body>
+</html>

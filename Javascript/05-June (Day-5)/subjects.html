@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Pass Or Not</title>
+</head>
+
+<body>
+
+    <h1>Student Pass Or Not</h1>
+
+    <script>
+
+        var math = Number(prompt("Enter marks of math: "));
+        var science = Number(prompt("Enter marks of science: "));
+        var hist = Number(prompt("Enter marks of history: "));
+        var english = Number(prompt("Enter marks of english: "));
+        
+        console.log(math,science,hist,english);
+        
+
+        if(math >= 35 && science >= 35 && hist >= 35 && english >= 35)
+        {
+            document.write("Student is passed in all subjects");
+        }
+        else
+        {
+            document.write("Student fail");
+        }
+
+    </script>
+
+</body>
+</html>

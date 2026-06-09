@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Program</title>
+</head>
+<body>
+    <h1>Calculator Program</h1>
+<script>
+    var num1 = Number(prompt("enter your first number: "));
+    var num2 = Number(prompt("enter your secomd number: "));
+    var ch = Number(prompt("enter your choice: \n1.addition\n2.subtraction\n3.multiplication\n4.division"));
+
+    switch(ch){
+        case 1:document.write("the sum of two numbers: "+(num1+num2));;
+        break;
+        case 2:document.write("the subtraction of two numbers: "(num1-num2));
+        break;
+        case 3:document.write("the multiplication of two numbers: "+(num1*num2));
+        break;
+        case 4:document.write("the divsion of two numbers: "+(num1/num2));
+        break;
+        default: document.write("invalid choice..!");
+    }
+
+
+</script>
+</body>
+</html>
