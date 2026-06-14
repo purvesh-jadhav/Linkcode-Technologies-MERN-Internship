@@ -1,0 +1,16 @@
+Skills I Already Have:
+
+1. Web Development Basics
+   - Understanding of HTML and CSS fundamentals
+   - Ability to create responsive web pages
+   - Familiar with basic frontend design concepts
+
+2. Programming Skills
+   - Knowledge of JavaScript programming
+   - Experience with C programming concepts
+   - Understanding of logic building and problem solving
+
+3. Version Control (Git)
+   - Ability to create repositories, commit and push code
+   - Understanding of branches and merging
+   - Familiar with GitHub for storing and managing projects
