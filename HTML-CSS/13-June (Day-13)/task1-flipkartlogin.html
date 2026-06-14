@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      * {
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .main-container {
+        width: 1200px;
+        height: 600px;
+        margin: 50px auto;
+        font-size: 0;
+      }
+
+      .left-side,
+      .right-side {
+        display: inline-block;
+        vertical-align: top;
+        height: 600px;
+        font-size: 16px;
+      }
+
+      .left-side {
+        width: 400px;
+        background: #2874f0;
+        color: white;
+        text-align: left;
+        padding: 40px;
+      }
+
+      .right-side {
+        width: 800px;
+        background: white;
+        text-align: left;
+        padding: 40px;
+      }
+
+      .bottom-img {
+        margin-top: 220px;
+        margin-left: 70px;
+      }
+
+      .bottom-img img {
+        width: 180px;
+      }
+
+      .input-box input {
+        width: 100%;
+        margin-top: 15px;
+        padding: 12px 5px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #2a4dbe;
+      }
+
+      .condition {
+        margin-top: 30px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #2874f0;
+      }
+
+      #otp-btn {
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+        background: #fb641b;
+        color: white;
+        border: none;
+        font-size: 16px;
+      }
+
+      .account-creation-title {
+        margin-top: 230px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="left-side">
+        <h1>Login</h1>
+
+        <h3>Get access to your orders, wishlist and recommendations</h3>
+
+        <div class="bottom-img">
+          <img src="logo-img.png" />
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="input-box">
+          <label> Enter mobile number / email id </label>
+
+          <br />
+
+          <input type="text" />
+        </div>
+
+        <div class="condition">
+          <p>
+            By continuing, you agree to Flipkart's
+            <a href="#"> Terms of use </a>
+            and
+            <a href="#"> Privacy Policy </a>
+          </p>
+        </div>
+
+        <button id="otp-btn">
+          <b>Request OTP</b>
+        </button>
+
+        <div class="account-creation-title">
+          <h4>
+            <a href="#"> New to Flipkart? Create an account </a>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

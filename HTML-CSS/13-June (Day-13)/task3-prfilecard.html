@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Profile Card</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      * {
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #eee;
+      }
+
+      .profile-card {
+        height: 400px;
+        width: 800px;
+        margin: 80px auto;
+        background: #d6f2fc;
+        border-radius: 20px;
+        overflow: hidden;
+        font-size: 0;
+      }
+
+      .img-side {
+        height: 400px;
+        width: 220px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+      }
+
+      .img-side img {
+        margin: 20px;
+        border-radius: 50%;
+        border: 8px solid white;
+      }
+
+      .desc-side {
+        display: inline-block;
+        vertical-align: top;
+        width: 580px;
+        padding: 20px;
+        font-size: 16px;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      h3 {
+        margin: 0;
+        color: #474747;
+      }
+
+      p {
+        width: 450px;
+        font-size: 20px;
+      }
+
+      .dashboard {
+        margin-top: 25px;
+        font-size: 20px;
+      }
+
+      .views,
+      .projects,
+      .folowers {
+        display: inline-block;
+        width: 120px;
+      }
+
+      .buttons {
+        margin-top: 25px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 12px 50px;
+        border-radius: 10px;
+        margin-right: 20px;
+      }
+
+      #follow-btn {
+        background: black;
+        color: white;
+      }
+
+      #profile-btn {
+        background: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="profile-card">
+      <div class="img-side">
+        <img src="https://static.vecteezy.com/system/resources/previews/057/527/094/non_2x/professional-man-in-a-black-suit-with-a-white-shirt-and-tie-minimalistic-style-illustration-vector.jpg" height="175px" width="175px" />
+      </div>
+
+      <div class="desc-side">
+        <div class="username">
+          <h1>John Doe</h1>
+
+          <h3>@johndoe</h3>
+        </div>
+
+        <div class="description">
+          <p>
+            I'm the Front End Developer, follow me to be the first who see my
+            new work
+          </p>
+        </div>
+
+        <div class="dashboard">
+          <div class="views">
+            <b>15k</b><br />
+
+            views
+          </div>
+
+          <div class="projects">
+            <b>82</b><br />
+
+            Projects
+          </div>
+
+          <div class="folowers">
+            <b>1.3M</b><br />
+
+            followers
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="follow-btn">
+            <b>Follow</b>
+          </button>
+
+          <button id="profile-btn">
+            <b>View Profile</b>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
