@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tech Products</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          Segoe UI,
+          sans-serif;
+      }
+
+      body {
+        background: #0f172a;
+        color: white;
+        text-align: center;
+        padding: 30px;
+      }
+
+      .container {
+        width: 1200px;
+        margin: auto;
+        background: #16213e;
+        border-radius: 20px;
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+      }
+
+      #showBtn {
+        background: #a78bfa;
+        color: #111827;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .card {
+        width: 260px;
+        height: 430px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 12px;
+        background: #1e293b;
+        border-radius: 12px;
+        overflow: hidden;
+        text-align: left;
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .content {
+        padding: 15px;
+        height: 250px;
+      }
+
+      .category {
+        color: #a78bfa;
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      h2 {
+        margin-top: 8px;
+        font-size: 22px;
+      }
+
+      h4 {
+        color: #94a3b8;
+        margin-top: 5px;
+        font-weight: normal;
+      }
+
+      .desc {
+        color: #cbd5e1;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 1.5;
+        height: 47px;
+        overflow: hidden;
+      }
+
+      .bottom {
+        margin-top: 0px;
+      }
+
+      .price {
+        font-size: 24px;
+        color: #dbeafe;
+        margin-bottom: 8px;
+      }
+
+      .buy {
+        width: 230px;
+        border: none;
+        background: #a78bfa;
+        color: #111827;
+        padding: 8px 14px;
+        border-radius: 6px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Shopping Website</h1>
+
+      <button id="showBtn" onclick="showProducts()">Show Products</button>
+
+      <div id="products"></div>
+    </div>
+
+    <script>
+      let card = document.getElementById("products");
+
+
+let products = [
+  {
+    pname: "Gaming Laptop",
+    cname: "ASUS",
+    category: "Laptop",
+    desc: "RTX graphics, fast processor and premium display.",
+    price: "89,999",
+    img: "https://media-ik.croma.com/Croma%20Assets/Computers%20Peripherals/Laptop/Images/316160_0_CG6snxfcF.png?updatedAt=1763015537545&tr=w-640",
+  },
+
+
+  {
+    pname: "iPhone 16",
+    cname: "Apple",
+    category: "Mobile",
+    desc: "Powerful smartphone with excellent camera and premium build quality.",
+    price: "79,999",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAu3P1XqTC9aSFijiADjkBlZNMDfHMyZBVng&s",
+  },
+
+
+  {
+    pname: "Galaxy S25",
+    cname: "Samsung",
+    category: "Mobile",
+    desc: "Flagship Android phone packed with AI features and smooth performance.",
+    price: "74,999",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHYC1LpDRfNeoWFYckKMttFXdh_6nSB_hDMQ&s",
+  },
+
+
+  {
+    pname: "Smart Watch",
+    cname: "Titan",
+    category: "Wearable",
+    desc: "Track health, fitness and daily activities with smart notifications.",
+    price: "9,999",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3gR2uBRSyj5T8pPidNKzrMBdLliKAQBhelA&s",
+  },
+
+
+  {
+    pname: "Wireless Earbuds",
+    cname: "Noise",
+    category: "Audio",
+    desc: "Crystal clear sound, deep bass and long battery backup.",
+    price: "2,999",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxuSB3sGUeNQ8s91u_DvTg8djo8lqEdrCJEQ&s",
+  },
+
+
+  {
+    pname: "DSLR Camera",
+    cname: "Canon",
+    category: "Camera",
+    desc: "Capture professional photos and videos with advanced image quality.",
+    price: "54,999",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn9HaU3Ijkv3fUo79KknwyZQUmEZZpKwuvyw&s",
+  }
+];
+
+
+
+function showProducts() {
+
+  card.innerHTML = "";
+
+
+  products.forEach((val) => {
+
+    card.innerHTML += `
+
+      <div class="card">
+
+        <img src="${val.img}">
+
+
+        <div class="content">
+
+
+          <p class="category">
+            ${val.category}
+          </p>
+
+
+          <h2>
+            ${val.pname}
+          </h2>
+
+
+          <h4>
+            ${val.cname}
+          </h4>
+
+
+          <p class="desc">
+            ${val.desc}
+          </p>
+
+
+
+          <div class="bottom">
+
+
+            <h3 class="price">
+              ₹${val.price}
+            </h3>
+
+
+            <button class="buy">
+              Buy Now
+            </button>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    `;
+
+  });
+
+}
+    </script>
+  </body>
+</html>
