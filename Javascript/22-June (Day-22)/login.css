@@ -1,0 +1,258 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(to bottom, #ccd3db 60%, #d2c6c4 60%);
+}
+
+.card-container {
+  background: #ffffff;
+  border-radius: 30px;
+  width: 950px;
+  max-width: 95%;
+  height: 600px;
+  display: flex;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.form-section {
+  width: 50%;
+  padding: 40px 30px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-header h1 {
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.form-header .subtitle {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: 'Outfit', sans-serif;
+  color: #333;
+  outline: none;
+  background-color: #fafafa;
+
+}
+
+
+.recovery-link-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.recovery-link {
+  font-size: 12px;
+  color: #888888;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background-color: #8e6366;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(142, 99, 102, 0.3);
+  margin-top: 10px;
+  font-family: 'Outfit', sans-serif;
+}
+
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 24px 0;
+  color: #888888;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.msg-container {
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.attempts-badge {
+  background-color: #ffeaea;
+  color: #e05252;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+
+
+.error-message {
+  color: #e05252;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.success-message {
+  color: #2e7d32;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #e8f5e9;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.forgot-link-box {
+  margin-top: 5px;
+}
+
+.forgot-link {
+  font-size: 14px;
+  color: #8e6366;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.forgot-link:hover {
+  color: #795255;
+}
+
+/* Right side Illustration styling */
+.image-section {
+  width: 50%;
+  padding-left: 12px;
+}
+
+.landscape-img-only {
+  width: 100%;
+  height: 100%;
+  background-image: url('landscape.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.illustration-card {
+  background: #2b2020;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-bar {
+  height: 12px;
+  background-color: #8e6366;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.phone-mockup {
+  flex-grow: 1;
+  background: #1e1616;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.landscape-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.illustration-text {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.illustration-text h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+  }
+  .form-section, .image-section {
+    width: 100%;
+  }
+  .image-section {
+    padding-left: 0;
+    margin-top: 20px;
+    height: 300px;
+  }
+  .phone-mockup {
+    height: 150px;
+  }
+}

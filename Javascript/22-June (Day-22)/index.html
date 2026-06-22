@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+    <div class="card-container">
+      <!-- Left side: Form -->
+      <div class="form-section">
+        <div class="form-header">
+          <h1>Hello Again!</h1>
+
+        </div>
+        
+        <div class="input-group">
+          <input type="text" name="" id="user" placeholder="Email" required />
+        </div>
+        
+        <div class="input-group">
+          <input type="password" name="" id="pass" placeholder="Password" required />
+          <div class="recovery-link-container">
+            <a href="forgotpass.html" class="recovery-link">Recovery Password</a>
+          </div>
+        </div>
+        
+        <button class="submit-btn" onclick="getData()">Sign In</button>
+        
+        <div class="divider">
+          <span><br>------------------- Or security status ------------------</span>
+        </div>
+        
+        <div id="msg" class="msg-container">
+          <div class="attempts-badge">• 3 ATTEMPTS REMAINING</div>
+          
+        </div>
+      </div>
+      
+      <!-- Right side: Illustration -->
+      <div class="image-section">
+        <div class="landscape-img-only"></div>
+      </div>
+    </div>
+
+    <script>
+      var userName = "purvesh";
+      var passWord = "purvesh@123";
+      var attempts = 3;
+      
+      function getData() {
+        var username = document.getElementById("user");
+        var password = document.getElementById("pass");
+        var message = document.getElementById("msg");
+
+        if (username.value == userName) {
+          if (password.value == passWord) {
+            message.innerHTML = `
+              <div class="success-message">Hello , ${userName}</div>
+            `;
+          } else {
+            if (attempts > 0) {
+              attempts--;
+            }
+            if (attempts == 0) {
+              message.innerHTML = `
+                <div class="error-message">Password incorrect !!</div>
+                <div class="forgot-link-box">
+                  <a href="forgotpass.html" class="forgot-link">Forgot password ? Click here</a>
+                </div>
+              `;
+            } else {
+              message.innerHTML = `
+                <div class="error-message">Password incorrect !!</div>
+                <div class="attempts-badge">• ${attempts} ATTEMPTS REMAINING</div>
+              `;
+            }
+          }
+        } else {
+          message.innerHTML = `
+            <div class="error-message">No user found !!</div>
+            <div class="attempts-badge">• ${attempts} ATTEMPTS REMAINING</div>
+          `;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="forgot.css">
+</head>
+<body>
+    <div class="card-container">
+      <!-- Left side: Form -->
+      <div class="form-section">
+        <div class="form-header">
+          <h1>Reset your password</h1>
+          <br>
+        </div>
+        
+        <div class="input-group">
+          <input type="tel" id="mobilenumber" placeholder="Mobile Number" required>
+        </div>
+        
+        <button class="otp-btn" onclick="generateOTP()">Generate OTP</button>
+        
+        <div class="divider">
+          <span>------------------- ENTER CODE BELOW -------------------</span>
+        </div>
+        
+        <div class="input-group">
+          <input type="number" id="otpInput" placeholder="Enter OTP" required class="otp-input-field">
+        </div>
+        
+        <button class="submit-btn" onclick="checkOTP()">Verify & Continue</button>
+        
+        <div class="return-login">
+          <a href="index.html">Return to login</a>
+        </div>
+        
+        <div id="msg" class="msg-container"></div>
+      </div>
+      
+      <!-- Right side: Illustration -->
+      <div class="image-section">
+        <div class="landscape-img-only"></div>
+      </div>
+    </div>
+
+    <script>
+        let OTP;
+        let otpTime;
+
+        let mobileNumber = document.getElementById("mobilenumber");
+        let otpInput = document.getElementById("otpInput");
+        let message = document.getElementById("msg");
+
+        function generateOTP() {
+            OTP = Math.floor(Math.random() * 9000) + 1000;
+            otpTime = new Date();
+            console.log("Your OTP is :", OTP);
+            message.innerHTML = `
+              <div class="info-message">OTP Generated (Valid for 30 Seconds)</div>
+            `;
+        }
+
+        function checkOTP() {
+            if (!otpTime) {
+                message.innerHTML = `
+                  <div class="error-message">Please generate OTP first!</div>
+                `;
+                return;
+            }
+            let currentTime = new Date();
+            let diff = (currentTime - otpTime) / 1000;
+            let enteredOTP = otpInput.value;
+            
+            if (diff > 30) {
+                message.innerHTML = `
+                  <div class="error-message">OTP Expired! Generate New OTP</div>
+                `;
+            } else if (enteredOTP == OTP) {
+                message.innerHTML = `
+                  <div class="success-message">Login Successful</div>
+                `;
+                alert("Login Successful!");
+            } else {
+                message.innerHTML = `
+                  <div class="error-message">Incorrect OTP</div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
