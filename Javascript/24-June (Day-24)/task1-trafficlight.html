@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Signal</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .signal-box {
+            width: 140px;
+            padding: 15px;
+            background-color: black;
+            border-radius: 15px;
+            margin: 20px auto 0;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin: 10px auto;
+            background-color: lightgray;
+        }
+
+        .pole {
+            width: 15px;
+            height: 235px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        .base {
+            width: 100px;
+            height: 20px;
+            background-color: black;
+            margin: 0 auto 20px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 15px 20px;
+            background-color: aquamarine;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signal-box">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+    </div>
+
+    <div class="pole"></div>
+    <div class="base"></div>
+
+    <button id="btn">Change Signal</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+
+        let box1 = document.getElementById("box1");
+        let box2 = document.getElementById("box2");
+        let box3 = document.getElementById("box3");
+
+        let signal = 1;
+
+        btn.addEventListener("click", function () {
+
+            box1.style.backgroundColor = "darkgray";
+            box2.style.backgroundColor = "darkgray";
+            box3.style.backgroundColor = "darkgray";
+
+            if (signal == 1) {
+                box1.style.backgroundColor = "red";
+                signal = 2;
+            }
+            else if (signal == 2) {
+                box2.style.backgroundColor = "yellow";
+                signal = 3;
+            }
+            else if (signal == 3) {
+                box3.style.backgroundColor = "green";
+                signal = 1;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
