@@ -1,0 +1,28 @@
+[2025-06-26 10:00:01] INFO User login successful: john
+
+[2025-06-26 10:01:10] INFO User login successful: alice
+
+[2025-06-26 10:02:30] INFO User login successful: david
+
+[2025-06-26 10:03:00] INFO Executing SQL Query:
+SELECT * FROM users WHERE id=101;
+
+[2025-06-26 10:03:30] INFO Executing SQL Query:
+UPDATE users SET email='john@example.com' WHERE id=101;
+
+[2025-06-26 10:04:00] INFO Executing SQL Query:
+INSERT INTO orders(id, amount) VALUES(1,500);
+
+[2025-06-26 10:04:40] INFO Executing SQL Query:
+DELETE FROM users WHERE id=105;
+
+[2025-06-26 10:05:20] INFO Database schema changed:
+ALTER TABLE users ADD COLUMN phone VARCHAR(15);
+
+[2025-06-26 10:06:10] INFO User logout: john
+
+[2025-06-26 10:06:40] INFO User logout: alice
+
+[2025-06-26 10:07:00] ERROR Connection timeout.
+
+[2025-06-26 10:07:30] INFO Backup completed successfully.
