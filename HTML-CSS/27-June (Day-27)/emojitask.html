@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #222;
+        }
+        .face {
+            width: 320px;
+            height: 320px;
+            background: #edbf07;
+            border-radius: 50%;
+            position: relative;
+            margin: 100px auto;
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        .face:hover {
+            transform: scale(1.08) rotate(5deg);
+        }
+
+        .eye {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            overflow: hidden;
+            transition: .4s;
+        }
+
+        .eye:hover {
+            transform: scale(1.2);
+        }
+
+        .left {
+            left: 65px;
+            top: 75px;
+        }
+
+        .right {
+            right: 65px;
+            top: 75px;
+        }
+
+        .ball {
+            width: 25px;
+            height: 25px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            left: 22px;
+            top: 22px;
+            animation: look 2s linear infinite;
+
+        }
+
+        @keyframes look {
+            0% {
+                left: 22px;
+                top: 7px;
+            }
+            12.5% {
+                left: 32px;
+                top: 12px;
+            }
+            25% {
+                left: 37px;
+                top: 22px;
+            }
+            37.5% {
+                left: 32px;
+                top: 32px;
+            }
+            50% {
+                left: 22px;
+                top: 37px;
+            }
+            62.5% {
+                left: 12px;
+                top: 32px;
+            }
+            75% {
+                left: 7px;
+                top: 22px;
+            }
+            87.5% {
+                left: 12px;
+                top: 12px;
+            }
+            100% {
+                left: 22px;
+                top: 7px;
+            }
+        }
+
+        .mouth {
+            width: 160px;
+            height: 95px;
+            background: #7b0000;
+            position: absolute;
+            left: 80px;
+            bottom: 45px;
+            border-radius: 0 0 90px 90px;
+            overflow: hidden;
+            transition: .5s;
+        }
+        .face:hover .mouth {
+            width: 190px;
+            height: 115px;
+            left: 65px;
+        }
+
+        .teeth {
+            width: 160px;
+            height: 28px;
+            background: white;
+            position: absolute;
+            top: 0;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .tongue {
+            width: 95px;
+            height: 55px;
+            background: pink;
+            border-radius: 50%;
+            position: absolute;
+            left: 32px;
+            bottom: -10px;
+        }
+
+
+     
+    </style>
+
+
+</head>
+
+
+<body>
+    <div class="face">
+        <div class="eye left">
+            <div class="ball"></div>
+        </div>
+
+
+        <div class="eye right">
+            <div class="ball"></div>
+        </div>
+
+
+        <div class="mouth">
+            <div class="teeth"></div>
+            <div class="tongue"></div>
+        </div>
+    </div>
+</body>
+</html>
