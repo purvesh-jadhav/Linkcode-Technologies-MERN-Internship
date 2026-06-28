@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinite Square Spiral</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#edf5e8;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.container{
+    width:400px;
+    height:400px;
+    position:relative;
+}
+
+.square{
+    position:absolute;
+    top:50%;
+    left:50%;
+    border:2px solid rgba(0,0,0,0.35);
+    transform-origin:center;
+    animation:rotate 8s linear infinite;
+}
+
+/* Squares */
+.s1{
+    width:300px;
+    height:300px;
+    margin-left:-150px;
+    margin-top:-150px;
+    animation-delay:0s;
+}
+
+.s2{
+    width:270px;
+    height:270px;
+    margin-left:-135px;
+    margin-top:-135px;
+    animation-delay:-0.4s;
+}
+
+.s3{
+    width:240px;
+    height:240px;
+    margin-left:-120px;
+    margin-top:-120px;
+    animation-delay:-0.8s;
+}
+
+.s4{
+    width:210px;
+    height:210px;
+    margin-left:-105px;
+    margin-top:-105px;
+    animation-delay:-1.2s;
+}
+
+.s5{
+    width:180px;
+    height:180px;
+    margin-left:-90px;
+    margin-top:-90px;
+    animation-delay:-1.6s;
+}
+
+.s6{
+    width:150px;
+    height:150px;
+    margin-left:-75px;
+    margin-top:-75px;
+    animation-delay:-2s;
+}
+
+.s7{
+    width:120px;
+    height:120px;
+    margin-left:-60px;
+    margin-top:-60px;
+    animation-delay:-2.4s;
+}
+
+.s8{
+    width:95px;
+    height:95px;
+    margin-left:-47.5px;
+    margin-top:-47.5px;
+    animation-delay:-2.8s;
+}
+
+.s9{
+    width:70px;
+    height:70px;
+    margin-left:-35px;
+    margin-top:-35px;
+    animation-delay:-3.2s;
+}
+
+.s10{
+    width:50px;
+    height:50px;
+    margin-left:-25px;
+    margin-top:-25px;
+    animation-delay:-3.6s;
+}
+
+.s11{
+    width:35px;
+    height:35px;
+    margin-left:-17.5px;
+    margin-top:-17.5px;
+    animation-delay:-4s;
+}
+
+.s12{
+    width:20px;
+    height:20px;
+    margin-left:-10px;
+    margin-top:-10px;
+    animation-delay:-4.4s;
+}
+
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="square s1"></div>
+    <div class="square s2"></div>
+    <div class="square s3"></div>
+    <div class="square s4"></div>
+    <div class="square s5"></div>
+    <div class="square s6"></div>
+    <div class="square s7"></div>
+    <div class="square s8"></div>
+    <div class="square s9"></div>
+    <div class="square s10"></div>
+    <div class="square s11"></div>
+    <div class="square s12"></div>
+</div>
+
+</body>
+</html>
