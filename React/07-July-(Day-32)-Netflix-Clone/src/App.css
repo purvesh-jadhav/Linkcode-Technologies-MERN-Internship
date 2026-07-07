@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+.home {
+  background-color: #111112;
+  height: 100vh;
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.85) 100%
+    ),
+    radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.75) 100%),
+    url(netflixbg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#logo-img {
+  height: 45px;
+  width: 140px;
+  margin-top: 22px;
+  margin-left: 150px;
+}
+
+#signin-btn {
+  background-color: #e50914;
+  font-weight: 600;
+  color: white;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 4px;
+  position: absolute;
+  top: 27px;
+  left: 1290px;
+  font-size: 15px;
+}
+
+#lang-select {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: 500;
+  padding: 7px 30px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  position: absolute;
+  top: 26px;
+  left: 1150px;
+  font-size: 15px;
+}
+
+.main-content {
+  position: relative;
+}
+
+#main-heading {
+  color: white;
+  font-size: 55px;
+  font-weight: 700;
+  position: absolute;
+  top: 185px;
+  left: 490px;
+  width: 520px;
+  text-align: center;
+}
+
+#prie-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  position: absolute;
+  top: 330px;
+  left: 490px;
+  width: 520px;
+  text-align: center;
+}
+
+#email-labling {
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  position: absolute;
+  top: 385px;
+  left: 400px;
+  width: 680px;
+  text-align: center;
+}
+
+.email-input-and-start {
+  position: absolute;
+  top: 425px;
+  left: 475px;
+}
+
+#email-input-box {
+  width: 340px;
+  padding: 18px 18px;
+  border-radius: 4px;
+  background-color: rgba(22, 22, 22, 0.7);
+  border: 1px solid #808080;
+  color: white;
+  font-size: 16px;
+}
+
+#getstart-btn {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px 22px;
+  border-radius: 4px;
+  background-color: #e50914;
+  border: none;
+  margin-left: 8px;
+}
+
+.mid {
+  background-color: #000;
+  padding-top: 30px;
+  position: relative;
+}
+
+#trending-heading {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+  left: 165px;
+}
+
+.posters {
+  padding-bottom: 50px;
+}
+
+#bhoot-bangla-img {
+  position: relative;
+  top: 15px;
+  left: 165px;
+  border-radius: 8px;
+}
+
+#chava-img {
+  position: relative;
+  top: 15px;
+  left: 195px;
+  border-radius: 8px;
+}
+
+#mabhen-img {
+  position: relative;
+  top: 15px;
+  left: 225px;
+  border-radius: 8px;
+}
+
+#kara-img {
+  position: relative;
+  top: 15px;
+  left: 255px;
+  border-radius: 8px;
+}
+
+#dhurandhar-img {
+  position: relative;
+  top: 15px;
+  left: 285px;
+  border-radius: 8px;
+}
+
+.reasons {
+  position: relative;
+  height: 380px;
+  margin-top: 30px;
+}
+
+#reasons-heading {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  position: relative;
+  left: 165px;
+}
+
+#reason-card-1 {
+  width: 300px;
+  height: 300px;
+  padding: 28px 22px;
+  box-sizing: border-box;
+  color: white;
+  position: absolute;
+  top: 65px;
+  left: 165px;
+  border-radius: 16px;
+  background: linear-gradient(
+    160deg,
+    #1d2254 0%,
+    #1a153f 55%,
+    #2b1040 85%,
+    #3a1050 100%
+  );
+}
+
+#reason-card-2 {
+  width: 300px;
+  height: 300px;
+  padding: 28px 22px;
+  box-sizing: border-box;
+  color: white;
+  position: absolute;
+  top: 65px;
+  left: 485px;
+  border-radius: 16px;
+  background: linear-gradient(
+    160deg,
+    #1d2254 0%,
+    #1a153f 55%,
+    #2b1040 85%,
+    #3a1050 100%
+  );
+}
+
+#reason-card-3 {
+  width: 300px;
+  height: 300px;
+  padding: 28px 22px;
+  box-sizing: border-box;
+  color: white;
+  position: absolute;
+  top: 65px;
+  left: 805px;
+  border-radius: 16px;
+  background: linear-gradient(
+    160deg,
+    #1d2254 0%,
+    #1a153f 55%,
+    #2b1040 85%,
+    #3a1050 100%
+  );
+}
+
+#reason-card-4 {
+  width: 300px;
+  height: 300px;
+  padding: 28px 22px;
+  box-sizing: border-box;
+  color: white;
+  position: absolute;
+  top: 65px;
+  left: 1125px;
+  border-radius: 16px;
+  background: linear-gradient(
+    160deg,
+    #1d2254 0%,
+    #1a153f 55%,
+    #2b1040 85%,
+    #3a1050 100%
+  );
+}
+
+#reason-card-heading {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#reason-desc {
+  font-size: 15px;
+  color: #e0e0e0;
+  margin-top: 10px;
+}
+
+.reasons svg {
+  font-size: 45px;
+  position: absolute;
+  bottom: 25px;
+  right: 22px;
+}
+
+.faq-section {
+  padding-bottom: 40px;
+  position: relative;
+}
+
+#faq-heading {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  margin-left: 165px;
+  margin-top: 70px;
+  margin-bottom: 22px;
+}
+
+.faq-box {
+  width: 1250px;
+  height: 72px;
+  background-color: #2d2d2d;
+  color: white;
+  margin-left: 165px;
+  margin-bottom: 8px;
+  line-height: 72px;
+  font-size: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.faq-plus {
+  float: right;
+  font-size: 38px;
+  font-weight: 300;
+}
+
+.footer-section {
+  background-color: #000;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+#footer-email-text {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.footer-email-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#footer-email {
+  width: 340px;
+  padding: 14px 15px;
+  background-color: rgba(22, 22, 22, 0.7);
+  border: 1px solid #808080;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#footer-getstarted {
+  padding: 14px 22px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+#questions {
+  margin-top: 70px;
+  margin-left: 165px;
+  color: #b3b3b3;
+  font-size: 16px;
+}
+
+.footer-links {
+  margin-top: 35px;
+  margin-left: 165px;
+}
+
+.footer-column {
+  display: inline-block;
+  width: 280px;
+  vertical-align: top;
+}
+
+.footer-column a {
+  display: block;
+  color: #b3b3b3;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+#footer-language {
+  margin-top: 35px;
+  margin-left: 165px;
+  background-color: #000;
+  color: white;
+  border: 1px solid #808080;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#netflix-india {
+  margin-top: 25px;
+  margin-left: 165px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
