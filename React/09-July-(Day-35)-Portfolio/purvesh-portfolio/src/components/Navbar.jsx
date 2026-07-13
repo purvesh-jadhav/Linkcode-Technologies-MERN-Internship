@@ -13,7 +13,7 @@ export default function Navbar() {
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
         <a href="#contact" className="btn btn-primary navButtonLink">
-          Let's Talk
+          Let's Talk !
         </a>
       </nav>
 
