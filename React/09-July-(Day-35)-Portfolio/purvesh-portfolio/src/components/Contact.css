@@ -1,0 +1,125 @@
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 34px;
+}
+
+.contactInfo li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contactIcon {
+  width: 44px;
+  height: 44px;
+  border: var(--border);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.contactLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.55;
+  margin-bottom: 2px;
+}
+
+.contactInfo a {
+  font-weight: 700;
+}
+
+.contactInfo a:hover {
+  color: var(--red);
+}
+
+.contactSocials {
+  display: flex;
+  gap: 14px;
+}
+
+.contactSocials a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border);
+  background: var(--white);
+  transition: all 0.2s var(--ease);
+}
+
+.contactSocials a:hover {
+  background: var(--ink);
+  color: var(--bg);
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 0 var(--blue);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--white);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  padding: 38px;
+}
+
+.contactForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.contactForm input,
+.contactForm textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  text-transform: none;
+  font-weight: 400;
+  padding: 12px 14px;
+  border: 2px solid var(--ink);
+  background: var(--bg);
+  color: var(--ink);
+  resize: vertical;
+  transition: box-shadow 0.2s var(--ease);
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  box-shadow: 4px 4px 0 var(--blue);
+}
+
+.contactSubmit {
+  justify-content: center;
+  margin-top: 6px;
+}
+
+@media (max-width: 860px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactForm {
+    padding: 26px;
+  }
+}

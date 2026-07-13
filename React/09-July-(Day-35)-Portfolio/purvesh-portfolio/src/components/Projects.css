@@ -1,0 +1,133 @@
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.project:nth-child(even) {
+  direction: rtl;
+}
+
+.project:nth-child(even) .projectBody {
+  direction: ltr;
+}
+
+.projectPreview {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: var(--border);
+}
+
+.project:nth-child(even) .projectPreview {
+  border-right: none;
+  border-left: var(--border);
+}
+
+.projectBlue .projectPreview {
+  background: var(--blue);
+}
+.projectRed .projectPreview {
+  background: var(--red);
+}
+.projectYellow .projectPreview {
+  background: var(--yellow);
+}
+
+.projectMark {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--white);
+  transition: transform 0.3s var(--ease);
+}
+
+.projectYellow .projectMark {
+  color: var(--ink);
+}
+
+.project:hover .projectMark {
+  transform: scale(1.08);
+}
+
+.projectBody {
+  padding: 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectCategory {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+
+.projectBody h3 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  text-transform: none;
+}
+
+.projectBody p {
+  color: var(--ink);
+  opacity: 0.72;
+  margin-bottom: 22px;
+  text-transform: none;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.projectTags span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border: 2px solid var(--ink);
+}
+
+.projectLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.projectLinks .btn {
+  padding: 11px 22px;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 860px) {
+  .project,
+  .project:nth-child(even) {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .projectPreview,
+  .project:nth-child(even) .projectPreview {
+    min-height: 220px;
+    border-right: none;
+    border-left: none;
+    border-bottom: var(--border);
+  }
+
+  .projectBody {
+    padding: 32px 26px;
+  }
+}

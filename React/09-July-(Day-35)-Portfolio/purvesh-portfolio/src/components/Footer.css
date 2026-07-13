@@ -1,0 +1,33 @@
+.footer {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 30px 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer .gradient-text {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.footerLink {
+  width: 42px;
+  height: 42px;
+  border: 2.5px solid var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg);
+  transition: all 0.2s var(--ease);
+}
+
+.footerLink:hover {
+  background: var(--bg);
+  color: var(--ink);
+  transform: translateY(-3px);
+}

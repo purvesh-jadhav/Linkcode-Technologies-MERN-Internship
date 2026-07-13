@@ -1,0 +1,74 @@
+.aboutArea {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.aboutParagraph {
+  color: var(--ink);
+  opacity: 0.75;
+  margin-bottom: 18px;
+  max-width: 540px;
+  text-transform: none;
+}
+
+.aboutStats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.aboutStat {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.aboutStats p {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  margin-top: 8px;
+}
+
+.aboutCards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.aboutCard {
+  padding: 30px;
+}
+
+.aboutCardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: var(--border);
+  color: var(--ink);
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.aboutCard h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.aboutCard p {
+  color: var(--ink);
+  opacity: 0.72;
+  font-size: 0.95rem;
+  text-transform: none;
+}
+
+@media (max-width: 900px) {
+  .aboutArea {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,243 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 160px 8vw 100px;
+}
+
+.heroText {
+  max-width: 620px;
+}
+
+.heroSmall {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+}
+
+.heroHeading {
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
+  margin-bottom: 26px;
+}
+
+.heroParagraph {
+  color: var(--ink);
+  opacity: 0.75;
+  font-size: 1.08rem;
+  max-width: 500px;
+  margin-bottom: 36px;
+  text-transform: none;
+}
+
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 44px;
+}
+
+.heroIcons {
+  display: flex;
+  gap: 16px;
+}
+
+.heroIcons a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border);
+  background: var(--white);
+  font-size: 1.15rem;
+  transition: all 0.2s var(--ease);
+}
+
+.heroIcons a:hover {
+  background: var(--ink);
+  color: var(--bg);
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 0 var(--red);
+}
+
+/* Visual side */
+.heroImage {
+  position: relative;
+  width: min(36vw, 420px);
+  height: min(36vw, 420px);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroCodeBadge {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
+  background: var(--white);
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.55rem;
+  color: var(--red);
+  animation: codeFloat 3s ease-in-out infinite;
+  z-index: 2;
+}
+
+.heroCard {
+  width: 78%;
+  height: 78%;
+  background: var(--white);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatCard 7s ease-in-out infinite;
+}
+
+.heroIcon {
+  width: 42%;
+  height: 42%;
+  color: var(--ink);
+  animation: iconFloat 5s ease-in-out infinite;
+}
+
+.heroDecor {
+  position: absolute;
+}
+
+.heroCircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: var(--border);
+  top: -4%;
+  right: 4%;
+  animation: bob 4s ease-in-out infinite reverse;
+}
+
+.heroTriangle {
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 78px solid var(--red);
+  bottom: -6%;
+  left: 2%;
+  filter: drop-shadow(4px 4px 0 var(--ink));
+  animation: bob 6s ease-in-out infinite;
+}
+
+.heroTag {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  background: var(--white);
+  border: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.heroTag1 {
+  top: 8%;
+  left: -6%;
+  color: var(--red);
+}
+.heroTag2 {
+  bottom: 16%;
+  right: -8%;
+  color: var(--yellow);
+}
+.heroTag3 {
+  bottom: -6%;
+  right: 26%;
+  color: #2e5c48;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+@keyframes iconFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-4deg);
+  }
+}
+
+.heroScroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  border: var(--border);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bob 3.2s ease-in-out infinite;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 140px;
+    gap: 70px;
+  }
+
+  .heroText {
+    max-width: 100%;
+  }
+
+  .heroParagraph {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroButtons,
+  .heroIcons {
+    justify-content: center;
+  }
+
+  .heroImage {
+    width: min(68vw, 320px);
+    height: min(68vw, 320px);
+  }
+}

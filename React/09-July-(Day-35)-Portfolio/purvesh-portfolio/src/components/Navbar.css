@@ -1,0 +1,95 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 8vw;
+  background: var(--bg);
+  border-bottom: var(--border);
+}
+
+.navLogo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.navLogo .gradient-text {
+  padding: 0 6px;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.navMenu a {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.navMenu a:not(.navButtonLink) {
+  border-bottom: 2.5px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.25s var(--ease);
+}
+
+.navMenu a:not(.navButtonLink):hover {
+  border-color: var(--red);
+}
+
+.navButtonLink {
+  padding: 9px 20px;
+  font-size: 0.8rem;
+}
+
+.navToggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+}
+
+.navToggle span {
+  width: 22px;
+  height: 2.5px;
+  background: var(--ink);
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+
+@media (max-width: 860px) {
+  .navToggle {
+    display: flex;
+  }
+
+  .navMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(78vw, 320px);
+    background: var(--bg);
+    border-left: var(--border);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 28px;
+    transform: translateX(0);
+  }
+
+  .navMenu a {
+    font-size: 1.15rem;
+  }
+}
