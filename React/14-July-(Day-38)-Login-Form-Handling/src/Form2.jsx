@@ -2,48 +2,47 @@ import { useState } from "react";
 import "./Form2.css";
 
 const Form2 = () => {
-
-  const [formData,setFormData]=useState({
-    name:"",
-    email:"",
-    city:"",
-    mobile:"",
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    city: "",
+    mobile: "",
   });
 
-  function handleChange(e){
+  // Store submitted data
+  const [submittedData, setSubmittedData] = useState(null);
+
+  function handleChange(e) {
     setFormData({
       ...formData,
-      [e.target.name]:e.target.value
+      [e.target.name]: e.target.value,
     });
   }
 
-  function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
 
-    console.log(formData);
+    // Save submitted data
+    setSubmittedData(formData);
 
+    // Clear form
     setFormData({
-      name:"",
-      email:"",
-      city:"",
-      mobile:"",
+      name: "",
+      email: "",
+      city: "",
+      mobile: "",
     });
   }
 
   return (
-
     <div className="container">
-
       <div className="card">
-
         <div className="left">
-
           <h1>Hello Again!</h1>
 
           <p>Create your account to continue</p>
 
           <form onSubmit={handleSubmit}>
-
             <input
               type="text"
               name="name"
@@ -76,27 +75,40 @@ const Form2 = () => {
               onChange={handleChange}
             />
 
-            <button type="submit">
-              SIGN UP
-            </button>
-
+            <button type="submit">SIGN UP</button>
           </form>
-
         </div>
 
         <div className="right">
+          {submittedData ? (
+            <div className="details">
+              <h2>Submitted Data</h2>
 
-          <img
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=900"
-            alt="nature"
-          />
+              <p>
+                <strong>Name:</strong> {submittedData.name}
+              </p>
 
+              <p>
+                <strong>Email:</strong> {submittedData.email}
+              </p>
+
+              <p>
+                <strong>City:</strong> {submittedData.city}
+              </p>
+
+              <p>
+                <strong>Mobile:</strong> {submittedData.mobile}
+              </p>
+            </div>
+          ) : (
+            <img
+              src="https://thumbs.dreamstime.com/b/small-robot-runs-holding-gear-big-smile-has-white-body-brown-accents-appears-to-be-playful-mood-focused-457781308.jpg"
+              alt="nature"
+            />
+          )}
         </div>
-
       </div>
-
     </div>
-
   );
 };
 
