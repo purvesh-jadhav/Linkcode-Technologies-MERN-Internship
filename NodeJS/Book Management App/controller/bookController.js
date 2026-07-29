@@ -6,8 +6,9 @@ const handleAddBookController = async (req, res) => {
 
     const book = await Book.insertOne(data);
 
-    return res.status(201).json({
-      message: "Details Added"
+    return res.status(200).json({
+      message: "Details Added",
+      book,
     });
   } catch (err) {
     return res.status(500).json({
@@ -16,4 +17,40 @@ const handleAddBookController = async (req, res) => {
   }
 };
 
-module.exports = { handleAddBookController };
+const handelgetAllBooksController = async (req, res) => {
+  try {
+    const booklist = await Book.find({});
+
+    return res.status(200).json({
+      message: "Book details fetched",
+      Booklist: booklist,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      message: err.message,
+    });
+  }
+};
+
+const handleDeleteBookController = async (req, res) => {
+  try {
+    const {_id} = req.body;
+
+    const deleted = await Book.deleteOne({ _id });
+
+    return res.status(200).json({
+      message: "Book Deleted",
+    });
+  } catch (err) {
+    return res.status(500).json({
+      message: err.message,
+    });
+  }
+};
+
+
+module.exports = {
+  handleAddBookController,
+  handelgetAllBooksController,
+  handleDeleteBookController,
+};
